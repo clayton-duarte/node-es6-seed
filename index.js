@@ -1,7 +1,4 @@
-const myModule = {
-  log(message){
-    return `Logging the message : ${message}`;
-  }
-}
 
-export default myModule;
+import Example from './src/example';
+
+exports.Example = Example;
