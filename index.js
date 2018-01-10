@@ -1,4 +1,5 @@
+import Demo from './src/Demo';
 
-import Example from './src/example';
-
-exports.Example = Example;
+module.exports = {
+    Demo: Demo,
+}

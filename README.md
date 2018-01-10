@@ -1,3 +1,16 @@
-# node-es6-seed
+# |React (Components) Packer|
 
-> Build node module with ES6, Babel and Webpack
+> Create and export React Components as a NPM Module, easy!
+
+### |How to use|
+
+- npm i - to install dependencies
+- npm start - to start development mode
+- npm build - to build your npm package
+
+### |Using Localy|
+
+- npm link - on this repository; then,
+- npm link react-packer - on the repository where you want to use your package localy
+
+### |Have FUN|
