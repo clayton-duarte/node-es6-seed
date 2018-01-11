@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { PureComponent as Component } from 'react';
 import './style.sass';
- 
-export default class extends React.PureComponent { 
+
+export default class extends Component { 
  
     render() { 
         return <div className='demo'>{this.props.children}</div> 

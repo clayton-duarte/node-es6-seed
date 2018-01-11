@@ -1,34 +1,44 @@
 {
-  "name": "react-packer",
-  "version": "1.0.0",
-  "description": "Create and export React Components as a NPM Module",
+  "name": "react-npm",
+  "version": "1.1.1",
+  "description": "Create and export React Components as a NPM package",
   "main": "pack/module.js",
   "scripts": {
-    "start": "webpack -w",
-    "build": "webpack -p",
+    "start": "npm test && npm link && webpack -w",
+    "build": "npm test && webpack -p",
+    "test": "npm unlink",
+    "deploy": "npm build && npm publish",
     "prepublish": "npm build"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/clayton-duarte/react-packer.git"
+    "url": "https://github.com/clayton-duarte/react-npm.git"
   },
   "keywords": [
     "node-module",
+    "package",
+    "seed",
     "es6",
     "webpack",
     "babel",
-    "react"
+    "react",
+    "jest",
+    "sass"
   ],
   "author": "Clayton Duarte",
   "license": "MIT",
-  "homepage": "https://github.com/clayton-duarte/react-packer",
+  "homepage": "https://github.com/clayton-duarte/react-npm",
   "devDependencies": {
     "babel-core": "^6.26.0",
+    "babel-jest": "^22.0.4",
     "babel-loader": "^7.1.2",
     "babel-preset-env": "^1.6.1",
     "babel-preset-react": "^6.24.1",
     "css-loader": "^0.28.8",
+    "enzyme": "^3.3.0",
+    "jest": "^22.0.5",
     "node-sass": "^4.7.2",
+    "npm-cli-login": "0.0.10",
     "react": "^16.2.0",
     "sass-loader": "^6.0.6",
     "style-loader": "^0.19.1",

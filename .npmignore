@@ -1,0 +1,9 @@
+# let only the module files to be published
+
+.gitignore
+
+index.js
+webpack.config.js
+
+/src
+/node_modules

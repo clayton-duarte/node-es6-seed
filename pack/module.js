@@ -387,7 +387,7 @@ module.exports = {
 
 
 Object.defineProperty(exports, "__esModule", {
-  value: true
+    value: true
 });
 
 var _react = __webpack_require__(7);
@@ -398,15 +398,15 @@ __webpack_require__(12);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-exports.default = class extends _react2.default.PureComponent {
+exports.default = class extends _react.PureComponent {
 
-  render() {
-    return _react2.default.createElement(
-      'div',
-      { className: 'demo' },
-      this.props.children
-    );
-  }
+    render() {
+        return _react2.default.createElement(
+            'div',
+            { className: 'demo' },
+            this.props.children
+        );
+    }
 };
 
 /***/ }),
