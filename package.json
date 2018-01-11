@@ -38,7 +38,6 @@
     "enzyme": "^3.3.0",
     "jest": "^22.0.5",
     "node-sass": "^4.7.2",
-    "npm-cli-login": "0.0.10",
     "react": "^16.2.0",
     "sass-loader": "^6.0.6",
     "style-loader": "^0.19.1",
