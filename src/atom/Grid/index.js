@@ -3,8 +3,9 @@ import './style.sass';
 
 export default class Grid extends Component {
  
-    render() { 
-        return <main className='grid' {...this.props}>{this.props.children}</main> 
+    render() {
+        const { className, ...etc } = this.props;
+        return <main className='grid' {...etc}>{this.props.children}</main> 
     } 
 }
 

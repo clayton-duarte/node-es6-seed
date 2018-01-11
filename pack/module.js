@@ -70,7 +70,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 8);
+/******/ 	return __webpack_require__(__webpack_require__.s = 9);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -123,9 +123,9 @@ module.exports = emptyFunction;
 
 
 if (process.env.NODE_ENV === 'production') {
-  module.exports = __webpack_require__(10);
-} else {
   module.exports = __webpack_require__(11);
+} else {
+  module.exports = __webpack_require__(12);
 }
 
 
@@ -515,7 +515,7 @@ var singleton = null;
 var	singletonCounter = 0;
 var	stylesInsertedAtTop = [];
 
-var	fixUrls = __webpack_require__(16);
+var	fixUrls = __webpack_require__(17);
 
 module.exports = function(list, options) {
 	if (typeof DEBUG !== "undefined" && DEBUG) {
@@ -837,11 +837,87 @@ function updateLink (link, options, obj) {
 "use strict";
 
 
-var _Demo = __webpack_require__(9);
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.FlexGH = exports.Row = exports.Col = undefined;
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = __webpack_require__(1);
+
+var _react2 = _interopRequireDefault(_react);
+
+__webpack_require__(18);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+class Grid extends _react.PureComponent {
+
+    render() {
+        const _props = this.props,
+              { className } = _props,
+              etc = _objectWithoutProperties(_props, ['className']);
+        return _react2.default.createElement(
+            'main',
+            _extends({ className: 'grid' }, etc),
+            this.props.children
+        );
+    }
+}
+
+exports.default = Grid;
+class Col extends _react.PureComponent {
+
+    render() {
+        return _react2.default.createElement(
+            'div',
+            _extends({ className: 'y' }, this.props),
+            this.props.children
+        );
+    }
+}
+
+exports.Col = Col;
+class Row extends _react.PureComponent {
+
+    render() {
+        return _react2.default.createElement(
+            'div',
+            _extends({ className: 'x' }, this.props),
+            this.props.children
+        );
+    }
+}
+
+exports.Row = Row; //be carefull with this one
+
+class FlexGH extends _react.PureComponent {
+
+    render() {
+        return _react2.default.createElement(
+            'div',
+            _extends({ className: 'flexGH' }, this.props),
+            this.props.children
+        );
+    }
+}
+exports.FlexGH = FlexGH;
+
+/***/ }),
+/* 9 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _Demo = __webpack_require__(10);
 
 var _Demo2 = _interopRequireDefault(_Demo);
 
-var _Grid = __webpack_require__(17);
+var _Grid = __webpack_require__(8);
 
 var _Grid2 = _interopRequireDefault(_Grid);
 
@@ -856,7 +932,7 @@ module.exports = _Demo2.default, {
 // library
 
 /***/ }),
-/* 9 */
+/* 10 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -870,9 +946,9 @@ var _react = __webpack_require__(1);
 
 var _react2 = _interopRequireDefault(_react);
 
-__webpack_require__(14);
+__webpack_require__(15);
 
-var _Grid = __webpack_require__(17);
+var _Grid = __webpack_require__(8);
 
 var _Grid2 = _interopRequireDefault(_Grid);
 
@@ -913,7 +989,7 @@ exports.default = class extends _react.PureComponent {
 };
 
 /***/ }),
-/* 10 */
+/* 11 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -941,7 +1017,7 @@ isValidElement:K,version:"16.2.0",__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_F
 
 
 /***/ }),
-/* 11 */
+/* 12 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -967,7 +1043,7 @@ var emptyObject = __webpack_require__(3);
 var invariant = __webpack_require__(4);
 var warning = __webpack_require__(5);
 var emptyFunction = __webpack_require__(0);
-var checkPropTypes = __webpack_require__(12);
+var checkPropTypes = __webpack_require__(13);
 
 // TODO: this is special because it gets imported during build.
 
@@ -2305,7 +2381,7 @@ module.exports = react;
 
 
 /***/ }),
-/* 12 */
+/* 13 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2321,7 +2397,7 @@ module.exports = react;
 if (process.env.NODE_ENV !== 'production') {
   var invariant = __webpack_require__(4);
   var warning = __webpack_require__(5);
-  var ReactPropTypesSecret = __webpack_require__(13);
+  var ReactPropTypesSecret = __webpack_require__(14);
   var loggedTypeFailures = {};
 }
 
@@ -2371,7 +2447,7 @@ module.exports = checkPropTypes;
 
 
 /***/ }),
-/* 13 */
+/* 14 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2390,13 +2466,13 @@ module.exports = ReactPropTypesSecret;
 
 
 /***/ }),
-/* 14 */
+/* 15 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(15);
+var content = __webpack_require__(16);
 if(typeof content === 'string') content = [[module.i, content, '']];
 // Prepare cssTransformation
 var transform;
@@ -2421,7 +2497,7 @@ if(false) {
 }
 
 /***/ }),
-/* 15 */
+/* 16 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(6)(false);
@@ -2435,7 +2511,7 @@ exports.push([module.i, ".demo {\n  color: tomato; }\n", ""]);
 
 
 /***/ }),
-/* 16 */
+/* 17 */
 /***/ (function(module, exports) {
 
 
@@ -2530,77 +2606,6 @@ module.exports = function (css) {
 
 
 /***/ }),
-/* 17 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-exports.FlexGH = exports.Row = exports.Col = undefined;
-
-var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
-
-var _react = __webpack_require__(1);
-
-var _react2 = _interopRequireDefault(_react);
-
-__webpack_require__(18);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-class Grid extends _react.PureComponent {
-
-    render() {
-        return _react2.default.createElement(
-            'main',
-            _extends({ className: 'grid' }, this.props),
-            this.props.children
-        );
-    }
-}
-
-exports.default = Grid;
-class Col extends _react.PureComponent {
-
-    render() {
-        return _react2.default.createElement(
-            'div',
-            _extends({ className: 'y' }, this.props),
-            this.props.children
-        );
-    }
-}
-
-exports.Col = Col;
-class Row extends _react.PureComponent {
-
-    render() {
-        return _react2.default.createElement(
-            'div',
-            _extends({ className: 'x' }, this.props),
-            this.props.children
-        );
-    }
-}
-
-exports.Row = Row; //be carefull with this one
-
-class FlexGH extends _react.PureComponent {
-
-    render() {
-        return _react2.default.createElement(
-            'div',
-            _extends({ className: 'flexGH' }, this.props),
-            this.props.children
-        );
-    }
-}
-exports.FlexGH = FlexGH;
-
-/***/ }),
 /* 18 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -2640,7 +2645,7 @@ exports = module.exports = __webpack_require__(6)(false);
 
 
 // module
-exports.push([module.i, ".flexGH * :not(script) {\n  display: flex;\n  flex: 1 1 0;\n  flex-direction: column;\n  flex-direction: row; }\n\n.grid {\n  display: flex;\n  flex: 1 1 0;\n  flex-direction: column;\n  flex-direction: row; }\n\n.x {\n  display: flex;\n  flex: 1 1 0;\n  flex-direction: column;\n  flex-direction: row; }\n\n.y {\n  display: flex;\n  flex: 1 1 0;\n  flex-direction: column;\n  flex-direction: row; }\n", ""]);
+exports.push([module.i, ".flexGH * :not(script) {\n  display: flex;\n  flex: 1 1 0;\n  flex-direction: column;\n  flex-direction: row; }\n\n.grid {\n  display: flex;\n  flex: 1 1 0;\n  flex-direction: column;\n  flex-direction: row; }\n  .grid.container {\n    margin: 0 auto;\n    max-width: 1024px; }\n\n.x {\n  display: flex;\n  flex: 1 1 0;\n  flex-direction: column;\n  flex-direction: row; }\n\n.y {\n  display: flex;\n  flex: 1 1 0;\n  flex-direction: column;\n  flex-direction: row; }\n", ""]);
 
 // exports
 
