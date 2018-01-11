@@ -8,6 +8,12 @@
 - npm start - to start development mode
 - npm build - to build your npm package
 
+### | The Demo Component |
+
+- just call: import Demo from 'react-npm';
+- add <Demo/> on your render method
+- see the magic!
+
 ### | Using Localy |
 
 - npm link - on this repository; then,

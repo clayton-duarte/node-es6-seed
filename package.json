@@ -1,6 +1,6 @@
 {
   "name": "react-npm",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "Create and export React Components as a NPM package",
   "main": "pack/module.js",
   "scripts": {
