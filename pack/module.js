@@ -847,9 +847,8 @@ var _Grid2 = _interopRequireDefault(_Grid);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-module.exports = {
+module.exports = _Demo2.default, {
     FlexGH: _Grid.FlexGH,
-    Demo: _Demo2.default,
     Grid: _Grid2.default,
     Col: _Grid.Col,
     Row: _Grid.Row
@@ -873,14 +872,41 @@ var _react2 = _interopRequireDefault(_react);
 
 __webpack_require__(14);
 
+var _Grid = __webpack_require__(17);
+
+var _Grid2 = _interopRequireDefault(_Grid);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 exports.default = class extends _react.PureComponent {
 
     render() {
         return _react2.default.createElement(
-            'div',
-            { className: 'demo' },
+            _Grid2.default,
+            null,
+            _react2.default.createElement(
+                _Grid.Col,
+                null,
+                'Col 1'
+            ),
+            _react2.default.createElement(
+                _Grid.Col,
+                null,
+                _react2.default.createElement(
+                    _Grid.Row,
+                    null,
+                    _react2.default.createElement(
+                        _Grid.Col,
+                        null,
+                        'Col 2'
+                    ),
+                    _react2.default.createElement(
+                        _Grid.Col,
+                        null,
+                        'Col 3'
+                    )
+                )
+            ),
             this.props.children
         );
     }
