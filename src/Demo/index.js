@@ -1,12 +1,12 @@
 import React, { PureComponent as Component } from 'react';
 import './style.sass';
 
-import Grid, { Col, Row } from '../atom/Grid';
+import Grid, { Col, Row } from '../atoms/Grid';
 
 export default class extends Component { 
  
     render() { 
-        return <Grid>
+        return <Grid container>
         <Col>Col 1</Col>
             <Col>
                 <Row>

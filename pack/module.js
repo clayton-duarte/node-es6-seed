@@ -70,7 +70,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 9);
+/******/ 	return __webpack_require__(__webpack_require__.s = 8);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -123,9 +123,9 @@ module.exports = emptyFunction;
 
 
 if (process.env.NODE_ENV === 'production') {
-  module.exports = __webpack_require__(11);
+  module.exports = __webpack_require__(10);
 } else {
-  module.exports = __webpack_require__(12);
+  module.exports = __webpack_require__(11);
 }
 
 
@@ -515,7 +515,7 @@ var singleton = null;
 var	singletonCounter = 0;
 var	stylesInsertedAtTop = [];
 
-var	fixUrls = __webpack_require__(17);
+var	fixUrls = __webpack_require__(16);
 
 module.exports = function(list, options) {
 	if (typeof DEBUG !== "undefined" && DEBUG) {
@@ -837,87 +837,11 @@ function updateLink (link, options, obj) {
 "use strict";
 
 
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-exports.FlexGH = exports.Row = exports.Col = undefined;
-
-var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
-
-var _react = __webpack_require__(1);
-
-var _react2 = _interopRequireDefault(_react);
-
-__webpack_require__(18);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
-
-class Grid extends _react.PureComponent {
-
-    render() {
-        const _props = this.props,
-              { className } = _props,
-              etc = _objectWithoutProperties(_props, ['className']);
-        return _react2.default.createElement(
-            'main',
-            _extends({ className: 'grid' }, etc),
-            this.props.children
-        );
-    }
-}
-
-exports.default = Grid;
-class Col extends _react.PureComponent {
-
-    render() {
-        return _react2.default.createElement(
-            'div',
-            _extends({ className: 'y' }, this.props),
-            this.props.children
-        );
-    }
-}
-
-exports.Col = Col;
-class Row extends _react.PureComponent {
-
-    render() {
-        return _react2.default.createElement(
-            'div',
-            _extends({ className: 'x' }, this.props),
-            this.props.children
-        );
-    }
-}
-
-exports.Row = Row; //be carefull with this one
-
-class FlexGH extends _react.PureComponent {
-
-    render() {
-        return _react2.default.createElement(
-            'div',
-            _extends({ className: 'flexGH' }, this.props),
-            this.props.children
-        );
-    }
-}
-exports.FlexGH = FlexGH;
-
-/***/ }),
-/* 9 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var _Demo = __webpack_require__(10);
+var _Demo = __webpack_require__(9);
 
 var _Demo2 = _interopRequireDefault(_Demo);
 
-var _Grid = __webpack_require__(8);
+var _Grid = __webpack_require__(17);
 
 var _Grid2 = _interopRequireDefault(_Grid);
 
@@ -932,7 +856,7 @@ module.exports = _Demo2.default, {
 // library
 
 /***/ }),
-/* 10 */
+/* 9 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -946,9 +870,9 @@ var _react = __webpack_require__(1);
 
 var _react2 = _interopRequireDefault(_react);
 
-__webpack_require__(15);
+__webpack_require__(14);
 
-var _Grid = __webpack_require__(8);
+var _Grid = __webpack_require__(17);
 
 var _Grid2 = _interopRequireDefault(_Grid);
 
@@ -959,7 +883,7 @@ exports.default = class extends _react.PureComponent {
     render() {
         return _react2.default.createElement(
             _Grid2.default,
-            null,
+            { container: true },
             _react2.default.createElement(
                 _Grid.Col,
                 null,
@@ -989,7 +913,7 @@ exports.default = class extends _react.PureComponent {
 };
 
 /***/ }),
-/* 11 */
+/* 10 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1017,7 +941,7 @@ isValidElement:K,version:"16.2.0",__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_F
 
 
 /***/ }),
-/* 12 */
+/* 11 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1043,7 +967,7 @@ var emptyObject = __webpack_require__(3);
 var invariant = __webpack_require__(4);
 var warning = __webpack_require__(5);
 var emptyFunction = __webpack_require__(0);
-var checkPropTypes = __webpack_require__(13);
+var checkPropTypes = __webpack_require__(12);
 
 // TODO: this is special because it gets imported during build.
 
@@ -2381,7 +2305,7 @@ module.exports = react;
 
 
 /***/ }),
-/* 13 */
+/* 12 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2397,7 +2321,7 @@ module.exports = react;
 if (process.env.NODE_ENV !== 'production') {
   var invariant = __webpack_require__(4);
   var warning = __webpack_require__(5);
-  var ReactPropTypesSecret = __webpack_require__(14);
+  var ReactPropTypesSecret = __webpack_require__(13);
   var loggedTypeFailures = {};
 }
 
@@ -2447,7 +2371,7 @@ module.exports = checkPropTypes;
 
 
 /***/ }),
-/* 14 */
+/* 13 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2466,13 +2390,13 @@ module.exports = ReactPropTypesSecret;
 
 
 /***/ }),
-/* 15 */
+/* 14 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(16);
+var content = __webpack_require__(15);
 if(typeof content === 'string') content = [[module.i, content, '']];
 // Prepare cssTransformation
 var transform;
@@ -2497,7 +2421,7 @@ if(false) {
 }
 
 /***/ }),
-/* 16 */
+/* 15 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(6)(false);
@@ -2511,7 +2435,7 @@ exports.push([module.i, ".demo {\n  color: tomato; }\n", ""]);
 
 
 /***/ }),
-/* 17 */
+/* 16 */
 /***/ (function(module, exports) {
 
 
@@ -2604,6 +2528,81 @@ module.exports = function (css) {
 	return fixedCss;
 };
 
+
+/***/ }),
+/* 17 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.FlexGH = exports.Row = exports.Col = undefined;
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = __webpack_require__(1);
+
+var _react2 = _interopRequireDefault(_react);
+
+__webpack_require__(18);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+class Grid extends _react.PureComponent {
+
+    render() {
+
+        let container = this.props.container ? 'container' : '';
+        let classNames = [this.props.className, container, 'grid'].join(' ').trim();
+
+        return _react2.default.createElement(
+            'main',
+            _extends({ className: classNames }, this.props),
+            this.props.children
+        );
+    }
+}
+
+exports.default = Grid;
+class Col extends _react.PureComponent {
+
+    render() {
+        return _react2.default.createElement(
+            'div',
+            _extends({ className: 'y' }, this.props),
+            this.props.children
+        );
+    }
+}
+
+exports.Col = Col;
+class Row extends _react.PureComponent {
+
+    render() {
+        return _react2.default.createElement(
+            'div',
+            _extends({ className: 'x' }, this.props),
+            this.props.children
+        );
+    }
+}
+
+exports.Row = Row; //be carefull with this one
+
+class FlexGH extends _react.PureComponent {
+
+    render() {
+        return _react2.default.createElement(
+            'div',
+            _extends({ className: 'flexGH' }, this.props),
+            this.props.children
+        );
+    }
+}
+exports.FlexGH = FlexGH;
 
 /***/ }),
 /* 18 */
