@@ -837,40 +837,13 @@ function updateLink (link, options, obj) {
 "use strict";
 
 
-var _Demo = __webpack_require__(9);
-
-var _Demo2 = _interopRequireDefault(_Demo);
-
-var _Grid = __webpack_require__(17);
-
-var _Grid2 = _interopRequireDefault(_Grid);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-module.exports = _Demo2.default, {
-    FlexGH: _Grid.FlexGH,
-    Grid: _Grid2.default,
-    Col: _Grid.Col,
-    Row: _Grid.Row
-};
-// library
-
-/***/ }),
-/* 9 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
 Object.defineProperty(exports, "__esModule", {
-    value: true
+  value: true
 });
 
-var _react = __webpack_require__(1);
+var _Doc = __webpack_require__(20);
 
-var _react2 = _interopRequireDefault(_react);
-
-__webpack_require__(14);
+var _Doc2 = _interopRequireDefault(_Doc);
 
 var _Grid = __webpack_require__(17);
 
@@ -878,41 +851,16 @@ var _Grid2 = _interopRequireDefault(_Grid);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-exports.default = class extends _react.PureComponent {
+exports.default = _Doc2.default;
 
-    render() {
-        return _react2.default.createElement(
-            _Grid2.default,
-            { container: true },
-            _react2.default.createElement(
-                _Grid.Col,
-                null,
-                'Col 1'
-            ),
-            _react2.default.createElement(
-                _Grid.Col,
-                null,
-                _react2.default.createElement(
-                    _Grid.Row,
-                    null,
-                    _react2.default.createElement(
-                        _Grid.Col,
-                        null,
-                        'Col 2'
-                    ),
-                    _react2.default.createElement(
-                        _Grid.Col,
-                        null,
-                        'Col 3'
-                    )
-                )
-            ),
-            this.props.children
-        );
-    }
-};
+
+exports.FlexGH = _Grid.FlexGH;
+exports.Grid = _Grid2.default;
+exports.Col = _Grid.Col;
+exports.Row = _Grid.Row;
 
 /***/ }),
+/* 9 */,
 /* 10 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -2390,51 +2338,8 @@ module.exports = ReactPropTypesSecret;
 
 
 /***/ }),
-/* 14 */
-/***/ (function(module, exports, __webpack_require__) {
-
-// style-loader: Adds some css to the DOM by adding a <style> tag
-
-// load the styles
-var content = __webpack_require__(15);
-if(typeof content === 'string') content = [[module.i, content, '']];
-// Prepare cssTransformation
-var transform;
-
-var options = {"hmr":true}
-options.transform = transform
-// add the styles to the DOM
-var update = __webpack_require__(7)(content, options);
-if(content.locals) module.exports = content.locals;
-// Hot Module Replacement
-if(false) {
-	// When the styles change, update the <style> tags
-	if(!content.locals) {
-		module.hot.accept("!!../../node_modules/css-loader/index.js!../../node_modules/sass-loader/lib/loader.js!./style.sass", function() {
-			var newContent = require("!!../../node_modules/css-loader/index.js!../../node_modules/sass-loader/lib/loader.js!./style.sass");
-			if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-			update(newContent);
-		});
-	}
-	// When the module is disposed, remove the <style> tags
-	module.hot.dispose(function() { update(); });
-}
-
-/***/ }),
-/* 15 */
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__(6)(false);
-// imports
-
-
-// module
-exports.push([module.i, ".demo {\n  color: tomato; }\n", ""]);
-
-// exports
-
-
-/***/ }),
+/* 14 */,
+/* 15 */,
 /* 16 */
 /***/ (function(module, exports) {
 
@@ -2645,6 +2550,108 @@ exports = module.exports = __webpack_require__(6)(false);
 
 // module
 exports.push([module.i, ".flexGH * :not(script) {\n  display: flex;\n  flex: 1 1 0;\n  flex-direction: column;\n  flex-direction: row; }\n\n.grid {\n  display: flex;\n  flex: 1 1 0;\n  flex-direction: column;\n  flex-direction: row; }\n  .grid.container {\n    margin: 0 auto;\n    max-width: 1024px; }\n\n.x {\n  display: flex;\n  flex: 1 1 0;\n  flex-direction: column;\n  flex-direction: row; }\n\n.y {\n  display: flex;\n  flex: 1 1 0;\n  flex-direction: column;\n  flex-direction: row; }\n", ""]);
+
+// exports
+
+
+/***/ }),
+/* 20 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _react = __webpack_require__(1);
+
+var _react2 = _interopRequireDefault(_react);
+
+__webpack_require__(21);
+
+var _Grid = __webpack_require__(17);
+
+var _Grid2 = _interopRequireDefault(_Grid);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+exports.default = class extends _react.PureComponent {
+
+    render() {
+        return _react2.default.createElement(
+            _Grid2.default,
+            { container: true },
+            _react2.default.createElement(
+                _Grid.Col,
+                null,
+                'Col 1'
+            ),
+            _react2.default.createElement(
+                _Grid.Col,
+                null,
+                _react2.default.createElement(
+                    _Grid.Row,
+                    null,
+                    _react2.default.createElement(
+                        _Grid.Col,
+                        null,
+                        'Col 2'
+                    ),
+                    _react2.default.createElement(
+                        _Grid.Col,
+                        null,
+                        'Col 3'
+                    )
+                )
+            ),
+            this.props.children
+        );
+    }
+};
+
+/***/ }),
+/* 21 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(22);
+if(typeof content === 'string') content = [[module.i, content, '']];
+// Prepare cssTransformation
+var transform;
+
+var options = {"hmr":true}
+options.transform = transform
+// add the styles to the DOM
+var update = __webpack_require__(7)(content, options);
+if(content.locals) module.exports = content.locals;
+// Hot Module Replacement
+if(false) {
+	// When the styles change, update the <style> tags
+	if(!content.locals) {
+		module.hot.accept("!!../../node_modules/css-loader/index.js!../../node_modules/sass-loader/lib/loader.js!./style.sass", function() {
+			var newContent = require("!!../../node_modules/css-loader/index.js!../../node_modules/sass-loader/lib/loader.js!./style.sass");
+			if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+			update(newContent);
+		});
+	}
+	// When the module is disposed, remove the <style> tags
+	module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+/* 22 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(6)(false);
+// imports
+
+
+// module
+exports.push([module.i, ".demo {\n  color: tomato; }\n", ""]);
 
 // exports
 

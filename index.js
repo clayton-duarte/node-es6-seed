@@ -1,11 +1,9 @@
-import Demo from './src/Demo';
-// library
+import Doc from './src/Doc';
 import Grid, { Col, Row, FlexGH } from './src/atoms/Grid';
 
-module.exports = Demo,
-    {
-        FlexGH: FlexGH,
-        Grid: Grid,
-        Col: Col,
-        Row: Row,
-    }
+export default Doc;
+
+exports.FlexGH = FlexGH;
+exports.Grid = Grid;
+exports.Col = Col;
+exports.Row = Row;
