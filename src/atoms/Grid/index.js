@@ -6,7 +6,7 @@ export default class Grid extends Component {
     render() {
 
         let container = this.props.container ? 'container' : '';
-        let classNames = [ this.props.className, container, 'grid' ].join(' ').trim();
+        let classNames = [ 'grid', container, this.props.className ].join(' ').trim();
 
         return <main className={classNames} {...this.props}>{this.props.children}</main> 
     } 

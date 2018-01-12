@@ -1,4 +1,4 @@
-import Doc from './src/Doc';
+import Doc from './src/pages';
 import Grid, { Col, Row, FlexGH } from './src/atoms/Grid';
 
 export default Doc;

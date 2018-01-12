@@ -841,9 +841,9 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _Doc = __webpack_require__(20);
+var _pages = __webpack_require__(23);
 
-var _Doc2 = _interopRequireDefault(_Doc);
+var _pages2 = _interopRequireDefault(_pages);
 
 var _Grid = __webpack_require__(17);
 
@@ -851,7 +851,7 @@ var _Grid2 = _interopRequireDefault(_Grid);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-exports.default = _Doc2.default;
+exports.default = _pages2.default;
 
 
 exports.FlexGH = _Grid.FlexGH;
@@ -2461,7 +2461,7 @@ class Grid extends _react.PureComponent {
     render() {
 
         let container = this.props.container ? 'container' : '';
-        let classNames = [this.props.className, container, 'grid'].join(' ').trim();
+        let classNames = ['grid', container, this.props.className].join(' ').trim();
 
         return _react2.default.createElement(
             'main',
@@ -2555,7 +2555,10 @@ exports.push([module.i, ".flexGH * :not(script) {\n  display: flex;\n  flex: 1 1
 
 
 /***/ }),
-/* 20 */
+/* 20 */,
+/* 21 */,
+/* 22 */,
+/* 23 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2568,8 +2571,6 @@ Object.defineProperty(exports, "__esModule", {
 var _react = __webpack_require__(1);
 
 var _react2 = _interopRequireDefault(_react);
-
-__webpack_require__(21);
 
 var _Grid = __webpack_require__(17);
 
@@ -2586,75 +2587,73 @@ exports.default = class extends _react.PureComponent {
             _react2.default.createElement(
                 _Grid.Col,
                 null,
-                'Col 1'
-            ),
-            _react2.default.createElement(
-                _Grid.Col,
-                null,
+                '<Grid/>',
                 _react2.default.createElement(
                     _Grid.Row,
                     null,
+                    '<Row/>',
                     _react2.default.createElement(
                         _Grid.Col,
                         null,
-                        'Col 2'
+                        '<Col/>'
                     ),
                     _react2.default.createElement(
                         _Grid.Col,
                         null,
-                        'Col 3'
-                    )
+                        '<Col/>',
+                        _react2.default.createElement(
+                            _Grid.Row,
+                            null,
+                            '<Row/>',
+                            _react2.default.createElement(
+                                _Grid.Col,
+                                null,
+                                '<Col/>'
+                            ),
+                            _react2.default.createElement(
+                                _Grid.Col,
+                                null,
+                                '<Col/>'
+                            )
+                        )
+                    ),
+                    this.props.children
+                ),
+                _react2.default.createElement(
+                    _Grid.Row,
+                    null,
+                    '<Row/>',
+                    _react2.default.createElement(
+                        _Grid.Col,
+                        null,
+                        '<Col/>'
+                    ),
+                    _react2.default.createElement(
+                        _Grid.Col,
+                        null,
+                        '<Col/>',
+                        _react2.default.createElement(
+                            _Grid.Row,
+                            null,
+                            '<Row/>',
+                            _react2.default.createElement(
+                                _Grid.Col,
+                                null,
+                                '<Col/>'
+                            ),
+                            _react2.default.createElement(
+                                _Grid.Col,
+                                null,
+                                '<Col/>'
+                            )
+                        )
+                    ),
+                    this.props.children
                 )
-            ),
-            this.props.children
+            )
         );
     }
 };
-
-/***/ }),
-/* 21 */
-/***/ (function(module, exports, __webpack_require__) {
-
-// style-loader: Adds some css to the DOM by adding a <style> tag
-
-// load the styles
-var content = __webpack_require__(22);
-if(typeof content === 'string') content = [[module.i, content, '']];
-// Prepare cssTransformation
-var transform;
-
-var options = {"hmr":true}
-options.transform = transform
-// add the styles to the DOM
-var update = __webpack_require__(7)(content, options);
-if(content.locals) module.exports = content.locals;
-// Hot Module Replacement
-if(false) {
-	// When the styles change, update the <style> tags
-	if(!content.locals) {
-		module.hot.accept("!!../../node_modules/css-loader/index.js!../../node_modules/sass-loader/lib/loader.js!./style.sass", function() {
-			var newContent = require("!!../../node_modules/css-loader/index.js!../../node_modules/sass-loader/lib/loader.js!./style.sass");
-			if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-			update(newContent);
-		});
-	}
-	// When the module is disposed, remove the <style> tags
-	module.hot.dispose(function() { update(); });
-}
-
-/***/ }),
-/* 22 */
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__(6)(false);
-// imports
-
-
-// module
-exports.push([module.i, ".demo {\n  color: tomato; }\n", ""]);
-
-// exports
-
 
 /***/ })
 /******/ ]);
