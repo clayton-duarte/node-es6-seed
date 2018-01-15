@@ -378,95 +378,66 @@ module.exports = warning;
 
 /***/ }),
 /* 6 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-
-var _react = __webpack_require__(1);
-
-var _react2 = _interopRequireDefault(_react);
-
-__webpack_require__(13);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__style_sass__ = __webpack_require__(13);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__style_sass___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__style_sass__);
 //Just copy and paste this folder again and again to start your own components
-exports.default = class extends _react.PureComponent {
+
+
+/* harmony default export */ __webpack_exports__["a"] = (class extends __WEBPACK_IMPORTED_MODULE_0_react__["PureComponent"] {
 
     render() {
-        return _react2.default.createElement(
+        return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
             'div',
             { className: 'my-component-unique-class' },
             'Build your stuff here!'
         );
     }
-};
+});
 
 /***/ }),
 /* 7 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _pages = __webpack_require__(8);
-
-var _pages2 = _interopRequireDefault(_pages);
-
-var _model_component = __webpack_require__(6);
-
-var _model_component2 = _interopRequireDefault(_model_component);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-//The pack only exports files exported below!
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__src_pages__ = __webpack_require__(8);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__src_model_component__ = __webpack_require__(6);
 
 //The build only compile files imported below!
-exports.default = _pages2.default;
 
-exports.Example = _model_component2.default;
+
+
+//The pack only exports files exported below!
+/* harmony default export */ __webpack_exports__["default"] = (__WEBPACK_IMPORTED_MODULE_0__src_pages__["a" /* default */]);
+exports.Example = __WEBPACK_IMPORTED_MODULE_1__src_model_component__["a" /* default */];
 
 /***/ }),
 /* 8 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__model_component__ = __webpack_require__(6);
 
 
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
 
-var _react = __webpack_require__(1);
-
-var _react2 = _interopRequireDefault(_react);
-
-var _model_component = __webpack_require__(6);
-
-var _model_component2 = _interopRequireDefault(_model_component);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-exports.default = class extends _react.PureComponent {
+/* harmony default export */ __webpack_exports__["a"] = (class extends __WEBPACK_IMPORTED_MODULE_0_react__["PureComponent"] {
 
     render() {
-        return _react2.default.createElement(
+        return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
             'div',
             null,
             'Edit this page and',
-            _react2.default.createElement(_model_component2.default, null)
+            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1__model_component__["a" /* default */], null)
         );
     }
-};
+});
 
 /***/ }),
 /* 9 */

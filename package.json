@@ -1,14 +1,13 @@
 {
   "name": "react-npm",
   "version": "2.0.0",
-  "description": "Create and export React Components as a NPM package",
+  "description": "create and export React Components as a NPM package",
   "main": "pack/module.js",
   "scripts": {
-    "start": "npm run dev",
-    "dev": "npm test && npm link && webpack -w",
-    "build": "npm test && webpack -p",
-    "test": "npm unlink",
-    "deploy": "npm build && npm publish",
+    "start": "node node_modules/react-npm-scripts -s",
+    "build": "react-npm-scripts -b",
+    "test": "react-npm-scripts -t",
+    "deploy": "react-npm-scripts -d",
     "prepublish": "npm build"
   },
   "repository": {
@@ -30,37 +29,7 @@
   "license": "MIT",
   "homepage": "https://github.com/clayton-duarte/react-npm",
   "devDependencies": {
-    "autoprefixer": "^7.2.5",
-    "babel-core": "^6.26.0",
-    "babel-jest": "^22.0.4",
-    "babel-loader": "^7.1.2",
-    "babel-plugin-transform-object-rest-spread": "^6.26.0",
-    "babel-preset-env": "^1.6.1",
-    "babel-preset-react": "^6.24.1",
-    "css-loader": "^0.28.8",
-    "enzyme": "^3.3.0",
-    "jest": "^22.0.5",
-    "node-sass": "^4.7.2",
-    "postcss-loader": "^2.0.10",
     "react": "^16.2.0",
-    "sass-loader": "^6.0.6",
-    "style-loader": "^0.19.1",
-    "webpack": "^3.8.1"
-  },
-  "babel": {
-    "presets": [
-      "react",
-      [
-        "env",
-        {
-          "targets": {
-            "node": "current"
-          }
-        }
-      ]
-    ],
-    "plugins": [
-      "transform-object-rest-spread"
-    ]
+    "react-npm-scripts": "^0.1.1"
   }
 }
