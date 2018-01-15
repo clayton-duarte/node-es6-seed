@@ -1,10 +1,14 @@
 {
   "name": "react-npm",
-  "version": "2.5.0",
+  "version": "2.0.0",
   "description": "create and export React Components as a NPM package",
-  "main": "index.js",
+  "main": "pack/module.js",
   "scripts": {
-    "start": "node index.js"
+    "start": "node node_modules/react-npm-scripts -s",
+    "build": "node node_modules/react-npm-scripts -b",
+    "test": "node node_modules/react-npm-scripts -t",
+    "deploy": "node node_modules/react-npm-scripts -d",
+    "prepublish": "npm build"
   },
   "repository": {
     "type": "git",
@@ -25,8 +29,7 @@
   "license": "MIT",
   "homepage": "https://github.com/clayton-duarte/react-npm",
   "devDependencies": {
-    "chalk": "^2.3.0",
-    "cross-spawn": "^5.1.0",
-    "ncp": "^2.0.0"
+    "react": "^16.2.0",
+    "react-npm-scripts": "^0.1.1"
   }
 }
