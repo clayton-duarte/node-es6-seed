@@ -1,9 +1,8 @@
+
+//The build only compile files imported below!
 import Doc from './src/pages';
-import Grid, { Col, Row, FlexGH } from './src/atoms/Grid';
+import Example from './src/_model_component';
 
+//The pack only exports files exported below!
 export default Doc;
-
-exports.FlexGH = FlexGH;
-exports.Grid = Grid;
-exports.Col = Col;
-exports.Row = Row;
+exports.Example = Example;

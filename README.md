@@ -10,21 +10,15 @@
 
 ### | The Demo Component |
 
-- just call: import Demo from 'react-npm';
-- add <Demo/> on your render method
+- just call: import Doc from 'react-npm';
+- add <Doc/> on your render method
 - see the magic!
 
 ### | Using Localy |
 
 - npm link - on this repository; then,
-- npm link react-packer - on the repository where you want to use your package localy
+- npm link react-npm - on the repository where you want to use your package localy
 
 ### | Have FUN |
 
-> Library
-
-- Grid
-- Col
-- Row
-- more...
-(soon)
+@clayton-duarte

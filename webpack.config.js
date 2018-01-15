@@ -1,3 +1,4 @@
+const autoprefixer = require('autoprefixer');
 module.exports = {
     entry: __dirname + '/index.js',
     target: 'node',
@@ -16,11 +17,26 @@ module.exports = {
         },{
             test: /\.(sass|scss|css)$/,
             use: [{ 
-                loader: "style-loader"
+                loader: 'style-loader'
             },{
-                loader: "css-loader"
+                loader: 'css-loader'
             },{
-                loader: "sass-loader"
+                loader: 'sass-loader'
+            },{
+                loader: 'postcss-loader',
+                options: {
+                    indent: 'postcss',
+                    plugins: () => {
+                        autoprefixer({
+                            browsers: [
+                                '>1%',
+                                'last 4 versions',
+                                'Firefox ESR',
+                                'not ie < 9',
+                            ]
+                        })
+                    }
+                }
             }],
         }]
     }
