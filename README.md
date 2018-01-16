@@ -4,21 +4,18 @@
 
 ### | How to use |
 
-- npm i - to install dependencies
-- npm start - to start development mode
-- npm build - to build your npm package
-
-### | The Demo Component |
-
-- just call: import Doc from 'react-npm';
-- add <Doc/> on your render method
-- see the magic!
+- npm install react-npm
+- npm start
+- make your magic
+- npm deploy
 
 ### | Using Localy |
 
-- npm link - on this repository; then,
-- npm link react-npm - on the repository where you want to use your package localy
+- npm link
+- npm link react-npm <= on the repository where you want to use your package
+
+- I recommend to use create-react-app as a sandbox to test your components
 
 ### | Have FUN |
 
-@clayton-duarte
+@clayton-duarte [github.com/clayton-duarte/]

@@ -1,9 +1,0 @@
-# let only the module files to be published
-
-*.log
-.gitignore
-
-index.js
-
-/src
-/node_modules

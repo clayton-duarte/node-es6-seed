@@ -1,10 +1,6 @@
 # let only the module files to be published
 
-*.log
-.gitignore
-
-index.js
-webpack.config.js
-
-/src
 /node_modules
+.gitignore
+index.js
+*.log
