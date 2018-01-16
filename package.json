@@ -31,5 +31,8 @@
   "devDependencies": {
     "react": "^16.2.0",
     "react-npm-scripts": "^1.1.1"
+  },
+  "dependencies": {
+    "react": "^16.2.0"
   }
 }
