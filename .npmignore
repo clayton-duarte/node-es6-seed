@@ -1,5 +1,5 @@
 # let only the module files to be published
-
+/src
 /node_modules
 .gitignore
 index.js
