@@ -1,8 +1,9 @@
 // Just copy and paste this folder again and again to start your own components
 import React, { PureComponent as Component } from 'react';
+import PropTypes from 'prop-types';
 import './style.sass';
 
-export default class extends Component {
+export default class Example extends Component {
   constructor(props) {
     super(props);
     this.state = {};
@@ -10,8 +11,13 @@ export default class extends Component {
   render() {
     return (
       <div className="my-component-unique-class">
-        Build your stuff here!
+        {this.props.children}
       </div>
     );
   }
+}
+
+//Component Documentation
+Example.propTypes = {
+  children: PropTypes.node.isRequired,
 }

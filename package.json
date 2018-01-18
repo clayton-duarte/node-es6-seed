@@ -1,6 +1,6 @@
 {
   "name": "react-npm",
-  "version": "2.6.0",
+  "version": "2.6.1",
   "description": "create and export React Components as a NPM package",
   "main": "pack/module.js",
   "scripts": {
@@ -30,9 +30,6 @@
   "homepage": "https://github.com/clayton-duarte/react-npm",
   "devDependencies": {
     "react": "^16.2.0",
-    "react-npm-scripts": "^1.1.3"
-  },
-  "dependencies": {
-    "react": "^16.2.0"
+    "react-npm-scripts": "^1.1.4"
   }
 }
